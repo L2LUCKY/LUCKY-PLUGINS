@@ -19,7 +19,7 @@ from AnonXMusic.utils.inline.playlist import (
     get_playlist_markup,
     warning_markup,
 )
-from AnonXMusic.utils.pastebin import VIPBin
+from AnonXMusic.utils.pastebin import AnonyBin
 from AnonXMusic.utils.stream.stream import stream
 
 # Define a dictionary to track the last message timestamp for each user
