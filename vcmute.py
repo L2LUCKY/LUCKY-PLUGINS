@@ -3,7 +3,7 @@ from pyrogram.types import Message
 
 from config import BANNED_USERS
 from AnonXMusic import app
-from AnonXMusic.core.call import VIP
+from AnonXMusic.core.call import Anony
 from AnonXMusic.utils.database import is_muted, mute_off, mute_on
 from AnonXMusic.utils.decorators import AdminRightsCheck
 
@@ -18,7 +18,7 @@ async def mute_admin(client, message: Message, _, chat_id):
             "➻ ᴍᴜsɪᴄ ɪs ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ", disable_web_page_preview=True
         )
     await mute_on(chat_id)
-    await VIP.mute_stream(chat_id)
+    await Anony.mute_stream(chat_id)
     await message.reply_text(
         "➻ ᴍᴜsɪᴄ ɪs ᴍᴜᴛᴇᴅ ʙʏ {}!".format(message.from_user.mention),
         disable_web_page_preview=True,
@@ -35,7 +35,7 @@ async def unmute_admin(client: Client, message: Message, _, chat_id):
             "➻ ᴍᴜsɪᴄ ɪs ᴀʟʀᴇᴀᴅʏ ᴜɴᴍᴜᴛᴇᴅ", disable_web_page_preview=True
         )
     await mute_off(chat_id)
-    await VIP.unmute_stream(chat_id)
+    await Anony.unmute_stream(chat_id)
     await message.reply_text(
         "➻ ᴍᴜsɪᴄ ɪs ᴜɴᴍᴜᴛᴇᴅ ʙʏ {}!".format(message.from_user.mention),
         disable_web_page_preview=True,
